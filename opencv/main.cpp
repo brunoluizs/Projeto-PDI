@@ -5,15 +5,15 @@ using namespace cv;
 int main(int argc, int **argv){
 
 	//Nome da Imagem
-	string filename = "lena.bmp";
+	//const char *filename = "lena.bmp";
 
 	//Carregar imagem dentro da matriz
 	Mat img;
-	img = imread(filename);
+	img = cvLoadImage("C:/Users/Alan/Documents/Visual Studio 2010/Projects/opencv/Debug/lena.bmp");
 
 	//Verifica carregamento
 	if (img.empty()){
-		fprintf(stderr, "Erro: imagem %s nao encontrada.\n", filename.c_str());
+		fprintf(stderr, "Erro: imagem %s nao encontrada.\n", "lena.bmp");
 		getchar();
 		exit(1);
 	}
